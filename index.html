@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>RCFE Form</title>
+    <meta name="description" content="Residential Care Facility for the Elderly Form Management System" />
+    <meta name="author" content="Lovable" />
+    
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#0077cc" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Forms" />
+    
+    <link rel="apple-touch-icon" href="/pwa-icons/icon-192x192.png" />
+    
+    <meta property="og:title" content="RCFE Form" />
+    <meta property="og:description" content="Residential Care Facility for the Elderly Form Management System" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/lovable-uploads/2771ba6e-f0e4-4f9e-a5ac-a7d4a849f1f4.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="/lovable-uploads/2771ba6e-f0e4-4f9e-a5ac-a7d4a849f1f4.png" />
+
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js')
+            .then(reg => console.log('Service worker registered.', reg))
+            .catch(err => console.error('Service worker registration failed:', err));
+        });
+      }
+    </script>
+  </body>
+</html>
