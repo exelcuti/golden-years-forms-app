@@ -3,6 +3,7 @@ export interface ResponsiblePerson {
   relationship: string;
   address: string;
   phoneNumber: string;
+  phone: string; // Legacy compatibility
   email?: string;
 }
 
@@ -10,6 +11,7 @@ export interface NotifyPerson {
   name: string;
   relationship: string;
   phoneNumber: string;
+  phone: string; // Legacy compatibility
   address?: string;
 }
 
@@ -102,6 +104,14 @@ export interface User {
   fullName?: string;
   avatarUrl?: string;
 }
+
+export interface Admin {
+  id: string;
+  email?: string;
+  fullName?: string;
+}
+
+export type NotifyPersons = NotifyPerson[];
 
 export interface AdminSharedFile {
   id: string;

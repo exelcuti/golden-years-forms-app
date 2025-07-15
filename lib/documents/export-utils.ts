@@ -62,3 +62,8 @@ Report Submitted By: ${report.reportSubmittedBy}
   document.body.removeChild(a)
   URL.revokeObjectURL(url)
 }
+
+export const exportXFDF = (data: any) => {
+  console.log('Exporting XFDF:', data);
+  // Mock XFDF export
+}
