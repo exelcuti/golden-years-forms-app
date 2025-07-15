@@ -42,6 +42,126 @@ export type Database = {
         }
         Relationships: []
       }
+      facility_info: {
+        Row: {
+          administrator_name: string | null
+          community_care_licensing_number: string
+          daily_respite_rate: number
+          dss_phone_number: string | null
+          facility_address: string
+          facility_license_number: string
+          facility_name: string
+          facility_phone_number: string | null
+          id: string
+          licensee_address: string
+          licensee_name: string
+          monthly_rate: number
+          ombudsman_number: string
+          updated_at: string | null
+          weekly_prorated_fee: number
+          weekly_prorated_rate: number
+        }
+        Insert: {
+          administrator_name?: string | null
+          community_care_licensing_number: string
+          daily_respite_rate?: number
+          dss_phone_number?: string | null
+          facility_address: string
+          facility_license_number: string
+          facility_name: string
+          facility_phone_number?: string | null
+          id?: string
+          licensee_address: string
+          licensee_name: string
+          monthly_rate?: number
+          ombudsman_number: string
+          updated_at?: string | null
+          weekly_prorated_fee?: number
+          weekly_prorated_rate?: number
+        }
+        Update: {
+          administrator_name?: string | null
+          community_care_licensing_number?: string
+          daily_respite_rate?: number
+          dss_phone_number?: string | null
+          facility_address?: string
+          facility_license_number?: string
+          facility_name?: string
+          facility_phone_number?: string | null
+          id?: string
+          licensee_address?: string
+          licensee_name?: string
+          monthly_rate?: number
+          ombudsman_number?: string
+          updated_at?: string | null
+          weekly_prorated_fee?: number
+          weekly_prorated_rate?: number
+        }
+        Relationships: []
+      }
+      facility_templates: {
+        Row: {
+          administrator_name: string | null
+          community_care_licensing_number: string
+          created_at: string | null
+          daily_respite_rate: number
+          dss_phone_number: string | null
+          facility_address: string
+          facility_license_number: string
+          facility_name: string
+          facility_phone_number: string | null
+          id: string
+          licensee_address: string
+          licensee_name: string
+          monthly_rate: number
+          name: string
+          ombudsman_number: string
+          updated_at: string | null
+          weekly_prorated_fee: number
+          weekly_prorated_rate: number
+        }
+        Insert: {
+          administrator_name?: string | null
+          community_care_licensing_number: string
+          created_at?: string | null
+          daily_respite_rate?: number
+          dss_phone_number?: string | null
+          facility_address: string
+          facility_license_number: string
+          facility_name: string
+          facility_phone_number?: string | null
+          id?: string
+          licensee_address: string
+          licensee_name: string
+          monthly_rate?: number
+          name: string
+          ombudsman_number: string
+          updated_at?: string | null
+          weekly_prorated_fee?: number
+          weekly_prorated_rate?: number
+        }
+        Update: {
+          administrator_name?: string | null
+          community_care_licensing_number?: string
+          created_at?: string | null
+          daily_respite_rate?: number
+          dss_phone_number?: string | null
+          facility_address?: string
+          facility_license_number?: string
+          facility_name?: string
+          facility_phone_number?: string | null
+          id?: string
+          licensee_address?: string
+          licensee_name?: string
+          monthly_rate?: number
+          name?: string
+          ombudsman_number?: string
+          updated_at?: string | null
+          weekly_prorated_fee?: number
+          weekly_prorated_rate?: number
+        }
+        Relationships: []
+      }
       resident_forms: {
         Row: {
           address: string | null

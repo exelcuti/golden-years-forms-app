@@ -109,6 +109,8 @@ export interface Admin {
   id: string;
   email?: string;
   fullName?: string;
+  username: string;
+  password: string;
 }
 
 export type NotifyPersons = NotifyPerson[];

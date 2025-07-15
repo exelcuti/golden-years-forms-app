@@ -1,6 +1,6 @@
 import { ResidentForm, FacilityInfo } from '@/types'
 
-export const downloadDoc = (residentForm: ResidentForm, facilityInfo: FacilityInfo) => {
+export const downloadDoc = (residentForm: ResidentForm, facilityInfo: FacilityInfo, formData?: any, options?: any) => {
   // Mock implementation for PDF generation
   console.log('Downloading contract for:', residentForm.residentName)
   console.log('Facility:', facilityInfo.facilityName)
