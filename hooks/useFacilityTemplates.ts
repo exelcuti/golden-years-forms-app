@@ -49,5 +49,25 @@ export const useFacilityTemplates = () => {
     fetchTemplates();
   }, []);
 
-  return { templates, loading, refetch: fetchTemplates };
+  const saveFacilityTemplate = async (template: any) => {
+    // Implementation placeholder
+  };
+
+  const getFacilityTemplates = async () => {
+    await fetchTemplates();
+    return templates;
+  };
+
+  const deleteFacilityTemplate = async (id: string) => {
+    // Implementation placeholder
+  };
+
+  return { 
+    templates, 
+    loading, 
+    refetch: fetchTemplates,
+    saveFacilityTemplate,
+    getFacilityTemplates,
+    deleteFacilityTemplate
+  };
 };

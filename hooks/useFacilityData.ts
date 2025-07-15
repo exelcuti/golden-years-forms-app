@@ -47,5 +47,10 @@ export const useFacilityData = () => {
     fetchFacilityInfo();
   }, []);
 
-  return { facilityInfo, loading, refetch: fetchFacilityInfo };
+  return { 
+    facilityInfo, 
+    setFacilityInfo,
+    loading, 
+    refetch: fetchFacilityInfo 
+  };
 };

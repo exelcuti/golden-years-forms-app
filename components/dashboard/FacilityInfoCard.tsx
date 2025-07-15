@@ -35,6 +35,7 @@ const FacilityInfoCard = ({ facilityInfo, templates, updateFacilityInfo }: Facil
                   facilityAddress: selectedTemplate.facilityAddress,
                   monthlyRate: selectedTemplate.monthlyRate,
                   dailyRespiteRate: selectedTemplate.dailyRespiteRate,
+                  weeklyProratedRate: selectedTemplate.weeklyProratedRate,
                   weeklyProratedFee: selectedTemplate.weeklyProratedFee,
                   communityCareLicensingNumber: selectedTemplate.communityCareLicensingNumber,
                   ombudsmanNumber: selectedTemplate.ombudsmanNumber,

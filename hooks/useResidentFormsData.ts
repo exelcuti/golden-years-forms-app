@@ -25,5 +25,10 @@ export const useResidentFormsData = () => {
     fetchForms();
   }, []);
 
-  return { forms, loading, refetch: fetchForms };
+  return { 
+    forms, 
+    setForms,
+    loading, 
+    refetch: fetchForms 
+  };
 };

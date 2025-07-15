@@ -81,6 +81,7 @@ const AdminFacilityForm = () => {
       facilityAddress: template.facilityAddress,
       monthlyRate: template.monthlyRate,
       dailyRespiteRate: template.dailyRespiteRate,
+      weeklyProratedRate: template.weeklyProratedRate,
       weeklyProratedFee: template.weeklyProratedFee,
       communityCareLicensingNumber: template.communityCareLicensingNumber,
       ombudsmanNumber: template.ombudsmanNumber,

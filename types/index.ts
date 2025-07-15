@@ -35,7 +35,7 @@ export interface ResidentForm {
 }
 
 export interface FacilityInfo {
-  id: string;
+  id?: string;
   facilityName: string;
   facilityLicenseNumber: string;
   facilityAddress: string;
@@ -54,7 +54,7 @@ export interface FacilityInfo {
 }
 
 export interface FacilityTemplate {
-  id: string;
+  id?: string;
   name: string;
   facilityName: string;
   facilityLicenseNumber: string;
@@ -106,7 +106,7 @@ export interface User {
 }
 
 export interface Admin {
-  id: string;
+  id?: string;
   email?: string;
   fullName?: string;
   username: string;
