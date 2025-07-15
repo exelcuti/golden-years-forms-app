@@ -6,48 +6,20 @@ import FormSection from "@/components/FormSection";
 
 interface FacilityInformationSectionProps {
   facilityName: string;
-  setFacilityName: (value: string) => void;
-  facilityAddress: string;
-  setFacilityAddress: (value: string) => void;
   facilityLicenseNumber: string;
-  setFacilityLicenseNumber: (value: string) => void;
-  facilityPhoneNumber: string;
-  setFacilityPhoneNumber: (value: string) => void;
-  communityCareNumber: string;
-  setCommunityCareNumber: (value: string) => void;
-  licenseeName: string;
-  setLicenseeName: (value: string) => void;
-  licenseeAddress: string;
-  setLicenseeAddress: (value: string) => void;
-  ombudsmanNumber: string;
-  setOmbudsmanNumber: (value: string) => void;
-  dssPhoneNumber: string;
-  setDssPhoneNumber: (value: string) => void;
-  administratorName: string;
-  setAdministratorName: (value: string) => void;
+  facilityAddress: string;
+  administratorName?: string;
+  facilityPhoneNumber?: string;
+  onInputChange: (field: string, value: string) => void;
 }
 
 const FacilityInformationSection: React.FC<FacilityInformationSectionProps> = ({
   facilityName,
-  setFacilityName,
-  facilityAddress,
-  setFacilityAddress,
   facilityLicenseNumber,
-  setFacilityLicenseNumber,
-  facilityPhoneNumber,
-  setFacilityPhoneNumber,
-  communityCareNumber,
-  setCommunityCareNumber,
-  licenseeName,
-  setLicenseeName,
-  licenseeAddress,
-  setLicenseeAddress,
-  ombudsmanNumber,
-  setOmbudsmanNumber,
-  dssPhoneNumber,
-  setDssPhoneNumber,
+  facilityAddress,
   administratorName,
-  setAdministratorName,
+  facilityPhoneNumber,
+  onInputChange,
 }) => {
   return (
     <FormSection
@@ -60,7 +32,7 @@ const FacilityInformationSection: React.FC<FacilityInformationSectionProps> = ({
           <Input
             id="facilityName"
             value={facilityName}
-            onChange={(e) => setFacilityName(e.target.value)}
+            onChange={(e) => onInputChange('facilityName', e.target.value)}
             placeholder="Enter facility name"
             required
           />
@@ -70,8 +42,8 @@ const FacilityInformationSection: React.FC<FacilityInformationSectionProps> = ({
           <Label htmlFor="facilityPhoneNumber">Facility Phone Number</Label>
           <Input
             id="facilityPhoneNumber"
-            value={facilityPhoneNumber}
-            onChange={(e) => setFacilityPhoneNumber(e.target.value)}
+            value={facilityPhoneNumber || ''}
+            onChange={(e) => onInputChange('facilityPhoneNumber', e.target.value)}
             placeholder="(XXX) XXX-XXXX"
           />
         </div>
@@ -81,7 +53,7 @@ const FacilityInformationSection: React.FC<FacilityInformationSectionProps> = ({
           <Input
             id="facilityAddress"
             value={facilityAddress}
-            onChange={(e) => setFacilityAddress(e.target.value)}
+            onChange={(e) => onInputChange('facilityAddress', e.target.value)}
             placeholder="Enter complete facility address"
             required
           />
@@ -92,63 +64,9 @@ const FacilityInformationSection: React.FC<FacilityInformationSectionProps> = ({
           <Input
             id="facilityLicenseNumber"
             value={facilityLicenseNumber}
-            onChange={(e) => setFacilityLicenseNumber(e.target.value)}
+            onChange={(e) => onInputChange('facilityLicenseNumber', e.target.value)}
             placeholder="Enter license number"
             required
-          />
-        </div>
-
-        <div className="space-y-2">
-          <Label htmlFor="communityCareNumber">Community Care Licensing Number *</Label>
-          <Input
-            id="communityCareNumber"
-            value={communityCareNumber}
-            onChange={(e) => setCommunityCareNumber(e.target.value)}
-            placeholder="Enter licensing number"
-            required
-          />
-        </div>
-
-        <div className="space-y-2">
-          <Label htmlFor="licenseeName">Licensee Name *</Label>
-          <Input
-            id="licenseeName"
-            value={licenseeName}
-            onChange={(e) => setLicenseeName(e.target.value)}
-            placeholder="Enter licensee name"
-            required
-          />
-        </div>
-
-        <div className="space-y-2">
-          <Label htmlFor="licenseeAddress">Licensee Address *</Label>
-          <Input
-            id="licenseeAddress"
-            value={licenseeAddress}
-            onChange={(e) => setLicenseeAddress(e.target.value)}
-            placeholder="Enter licensee address"
-            required
-          />
-        </div>
-
-        <div className="space-y-2">
-          <Label htmlFor="ombudsmanNumber">Ombudsman Number *</Label>
-          <Input
-            id="ombudsmanNumber"
-            value={ombudsmanNumber}
-            onChange={(e) => setOmbudsmanNumber(e.target.value)}
-            placeholder="Enter ombudsman phone number"
-            required
-          />
-        </div>
-
-        <div className="space-y-2">
-          <Label htmlFor="dssPhoneNumber">DSS Phone Number</Label>
-          <Input
-            id="dssPhoneNumber"
-            value={dssPhoneNumber}
-            onChange={(e) => setDssPhoneNumber(e.target.value)}
-            placeholder="Enter DSS phone number"
           />
         </div>
 
@@ -156,8 +74,8 @@ const FacilityInformationSection: React.FC<FacilityInformationSectionProps> = ({
           <Label htmlFor="administratorName">Administrator Name</Label>
           <Input
             id="administratorName"
-            value={administratorName}
-            onChange={(e) => setAdministratorName(e.target.value)}
+            value={administratorName || ''}
+            onChange={(e) => onInputChange('administratorName', e.target.value)}
             placeholder="Enter administrator name"
           />
         </div>
